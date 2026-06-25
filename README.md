@@ -68,6 +68,38 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 - **Managing Data**: Head over to the **Expenses** tab to view your complete, unfiltered history. Click the pencil icon to edit, or the X icon to securely delete a record.
 - **Resetting Data**: If you ever want to completely wipe your data and start fresh, simply open your browser's Developer Tools (F12) -> Application -> Local Storage, and clear the data for `localhost`.
 
+## 🏗️ Stack Choices & Tradeoffs
+
+- **React.js**: Chosen for its robust component-based architecture and efficient DOM updates. *Tradeoff*: Slight overhead for a simple app compared to vanilla JS, but allows for rapid scaling and complex state management (like the filtering system).
+- **Vite**: Chosen over Create React App (CRA) for significantly faster cold starts and Hot Module Replacement (HMR).
+- **Vanilla CSS (Glassmorphism)**: Chosen to create a highly custom, premium aesthetic without the bloat of heavy UI libraries (like Material UI). *Tradeoff*: Requires manual responsive media queries and custom cross-browser vendor prefixes.
+- **Local Storage Database**: Chosen for maximum privacy, zero setup time, and complete offline capability. *Tradeoff*: Data is not synced across devices; if the browser cache is cleared, data is permanently lost.
+
+---
+
+## ✅ What's Done & ⏭️ What's Skipped
+
+**What's Done:**
+- Complete CRUD functionality for expenses.
+- Advanced filtering (by category, date range, and title search).
+- A polished Dashboard with infinite historical month tracking.
+- Elegant, responsive Glassmorphic UI with Dark/Light mode support.
+- Robust client-side validation (preventing massive numbers and UI overflows).
+
+**What's Skipped (Future Scope):**
+- **User Authentication**: Skipped to keep the app strictly local and frictionless.
+- **Backend / Cloud Sync**: Skipped in favor of Local Storage for privacy and speed.
+- **Charts and Graphs**: Skipped standard chart libraries (like Chart.js) to keep the bundle size small, instead opting for custom CSS progress bars for the category breakdown.
+- **Data Export**: Exporting expenses to CSV/PDF is not currently implemented.
+
+---
+
+## ⚠️ Known Rough Edges
+
+- **Storage Limits**: Browser `localStorage` is generally limited to ~5MB. While sufficient for years of text-based expense logging, it is not infinitely scalable.
+- **Device Isolation**: Because data is saved to the local browser, you cannot log an expense on your phone and see it on your desktop.
+- **Date Inputs on Safari**: The native `<input type="date">` styling can sometimes appear slightly inconsistent on older iOS/Safari versions compared to Chrome.
+
 ---
 
 *Designed and crafted with a focus on UI/UX excellence.*
