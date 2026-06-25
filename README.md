@@ -1,4 +1,4 @@
-# 💳 Premium Personal Expense Tracker
+# 💳 Personal Expense Tracker
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![React](https://img.shields.io/badge/React-18.x-61DAFB?logo=react&logoColor=white)
@@ -42,7 +42,7 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 
 1. **Clone the repository** (or download the source code zip):
    ```bash
-   git clone https://github.com/harinandanmv/raify-demo-project.git
+   git clone https://github.com/harinandanmv/personal-expense-tracker.git
    cd riafy-project
    ```
 
